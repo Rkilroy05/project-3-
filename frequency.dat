@@ -1,0 +1,47 @@
+#include <iostream>
+#include <fstream>
+#include <map>
+
+int main()	{
+	std::map<string, int> itemFrequencies;
+
+	itemfrequencies["Spinach"]=3
+	itemfrequencies["Radishes"]=4
+	itemfrequencies["Broccoli"]=7
+	itemfrequencies["Peas"]=7
+	itemfrequencies["Cranberries"]=12
+	itemfrequencies["Potatoes"]=6
+	itemfrequencies["Cucumbers"]=7
+	itemfrequencies["Peaches"]=4
+	itemfrequencies["Zucchini"]=11
+	itemfrequencies["Cantaloupe"]=2
+	itemfrequencies["Beets"]=4
+	itemfrequencies["Cauliflower"]=8
+	itemfrequencies["Onions"]=5
+	itemfrequencies["Yams"]=5
+	itemfrequencies["Apples"]=5
+	itemfrequencies["Garlic"]=11
+	itemfrequencies["Pumpkins"]=2
+	itemfrequencies["Celery"]=6
+	itemfrequencies["Limes"]=1
+	itemfrequencies["Pears"]=1
+	
+	std::ofstream outputFile("frequency.dat");
+	if (!outputFile.is open()) {
+		std::cout << "error opening file." << std::endl;
+		return 1;
+	
+	}
+
+	for (const auto& pair : itemFrequencies) { 
+		outputFile<<pair.first<<" "<< pair.second << std::endl;
+		
+		}
+
+	outputFile.close();
+
+	std::cout << "data file created successfully." << std:: endl;
+
+	return 0;
+
+	)
